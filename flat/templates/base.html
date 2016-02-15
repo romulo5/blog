@@ -71,48 +71,16 @@
 
 <body id="{% block body_id %}body{% endblock %}">
 
-
-
-<!-- <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner"> -->
- <!--        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img class="icon-top hidden-sm hidden-xs" src="{% static "images/ceag-top-transp.png" %}" alt="">
-                {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-				{% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg">{{ settings.SITE_TAGLINE }}</p>{% endif %}
-            </div>
-            <div class="collapse navbar-collapse">
-               {% page_menu "pages/menus/dropdown.html" %}
-                </ul>
-            </div>
-        </div>
-    </header><!--/header-- -->>
-
- <!-- Top NAV BAR -->
-
     <nav class="navbar navbar-default navbar-fixed-top" >
         
         <div class="container-fluid">
             
-            <div class="navbar-header">
+            <div class="navbar-header ">
+                                                                  
+                <img class="icon-top hidden-sm hidden-xs navbar-left" src="{% static "images/ceag-top-transp.png" %}" alt="">
                 
-                <button type="button" class="navbar-toggle hvr-bounce-to-bottom " data-toggle="collapse" data-target=".navbar-collapse" >
-                    
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                <a class="navbar-brand navbar-right " href="/">Orçamento e Democracia</a>
-                
-                <img class="icon-top hidden-sm hidden-xs" src="{% static "images/ceag-top-transp.png" %}" alt="">
-                
-                
+                <a class="navbar-brand " href="/">Orçamento e Democracia</a>
+
                 <!--   {% if settings.SITE_TITLE %}
                 <a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>
                 {% endif %} -->
@@ -122,6 +90,13 @@
                 
             </div>
             <!-- <p class="navbar-text hidden-sm hidden-xs">Orçamento e Democracia</p> -->
+            <button type="button" class="navbar-toggle hvr-bounce-to-bottom " data-toggle="collapse" data-target=".navbar-collapse" >
+                    
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
             <div class="collapse navbar-collapse navbar-right">
                 <!-- {% search_form "all" %} -->
                 {% page_menu "pages/menus/dropdown.html" %}
@@ -144,8 +119,6 @@
 </div>
 {% endif %}
 {% endnevercache %}
-
-
 
 
 </div>
