@@ -1,51 +1,56 @@
-{% load i18n future pages_tags blog_tags keyword_tags mezzanine_tags %}
+{% load i18n pages_tags %}
+
+{% spaceless %}
 
 
-                <div class="col-md-3 col-sm-6">
-                    <h4>About Us</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                    <p>Pellentesque habitant morbi tristique senectus.</p>
-                </div><!--/.col-md-3-->
+<footer class="overfooter">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 col-sm-6 col-xs-12 widget">
+                <h3 class="widget-title"><i class="fa fa-phone  "></i>        Contato</h3>
+                    <div class="widget-body">
+                        <p>+55 61 4444-4444<br>
+                            <a href="mailto:#">orcamentoedemocracia@gmail.com</a><br>
+                            <br>
+                            Universidade de Brasília, Distrito Federal, CEP 37015
+                        </p>    
+                        <!-- /row of widgets -->
+                    </div>      
+            </div>
 
-              
-				<div class="col-md-3 col-sm-6">
-                    <h4>Address</h4>
-                    <address>
-                        <strong>Twitter, Inc.</strong><br>
-                        795 Folsom Ave, Suite 600<br>
-                        San Francisco, CA 94107<br>
-                        <abbr title="Phone">P:</abbr> (123) 456-7890
-                    </address>
-                   
-                   
-                </div> <!--/.col-md-3-->
-<div class="col-md-3 col-sm-6">
-		{% block blog_recent_posts %}
-			{% blog_recent_posts 5 as recent_posts %}
-				{% if recent_posts %}
-                    <h4>{% trans "Recent Posts" %}</h4>
-                    <div>
-						{% for recent_post in recent_posts %}
-                        <div class="media">
-                            <div class="pull-left">
-								{% if settings.BLOG_USE_FEATURED_IMAGE and recent_post.featured_image %}
-								
-								<a href="{{ blog_post.get_absolute_url }}">
-									<img width="100%" class="img-responsive img-blog" src="{{ MEDIA_URL }}{% thumbnail recent_post.featured_image 90 90 %}">
-								</a>
-									
-								{% endif %}
-                                
-                            </div>
-                            <div class="media-body">
-                                <span class="media-heading"><a href="{{ recent_post.get_absolute_url }}">{{ recent_post.title }}</a></span>
-                                <small class="muted">{% blocktrans with sometime=recent_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}</small>
-                            </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12 widget">
+                    <h3 class="widget-title"><i class="fa fa-hashtag"></i>
+                        Siga-nos</h3>
+                        <div class="widget-body">
+                            <p class="follow-me-icons">
+                                <a href=""><i class="fa fa-facebook fa-3x"></i></a>
+                                <a href=""><i class="fa fa-twitter fa-3x"></i></a>
+                                <a href=""><i class="fa fa-youtube fa-3x"></i></a>
+                                <a href=""><i class="fa fa-rss fa-3x"></i></a>
+                            </p>
+                            <br/>
                         </div>
-                     
-                    </div>  
-                    {% endfor %}
-              
-                {% endif %}
-{% endblock %}
-</div>
+                    </div>
+
+                    <!-- /row of widgets -->
+
+                    <div class="col-md-4  col-xs-12 widget">
+                        <h3 class="widget-title "><i class="fa fa-user"></i> Sobre</h3>
+                        <div class="widget-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+                        </div>
+                    </div>
+
+
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </footer>
+
+{% endspaceless %}
+
+
+
+
