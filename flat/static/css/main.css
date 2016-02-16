@@ -77,7 +77,7 @@ a:focus {
   min-width: 180px;
 }
 body >section {
-margin-top:80px;
+/*margin-top:80px;*/
 }
 .turquoise,
 .green-sea,
@@ -384,11 +384,71 @@ margin-top:80px;
 
 .title {
 padding: 10px 0 15px 15px;
+margin-top: 80px;
 
 }
 
 
+/*=========================================
+ Front
+==========================================*/
 
+#front {
+  background-color: #E1E1E1;
+  height: 80px;
+  margin-top: 70px;
+
+}
+.front {
+  padding-top: 10px;
+ 
+}
+.front p {
+  padding-top: 20px;
+  font-style: 'Open Sans Condensed';
+}
+
+
+/*=========================================
+ Sections
+==========================================*/
+#sections {
+  padding: 70px;
+}
+
+.media {
+  width: 100%;
+  .center-block();
+}
+
+.media-heading {
+text-align: center;
+}
+
+.fa-circle {
+color: #00AAFF;
+}
+
+.media:hover .fa-circle:before{
+  content:&quot;f05d&quot;;
+  color:green;
+  opacity:0.4;
+} 
+
+
+.fa-circle:hover {
+color: #fff;
+}
+
+
+/*=========================================
+Recent Posts
+==========================================*/
+
+.recents {
+  padding-top: 40px;
+background-color: ##1DB515FF;
+}
 
 
 .portfolio-items,
@@ -638,88 +698,7 @@ ul.tag-cloud li {
   text-align: center;
   padding: 0;
 }
-.btn-social.btn-facebook {
-  background: #4f7dd4;
-}
-.btn-social.btn-facebook:hover {
-  background: #789bde;
-}
-.btn-social.btn-twitter {
-  background: #5bceff;
-}
-.btn-social.btn-twitter:hover {
-  background: #8eddff;
-}
-.btn-social.btn-linkedin {
-  background: #21a6d8;
-}
-.btn-social.btn-linkedin:hover {
-  background: #49b9e3;
-}
-.btn-social.btn-google-plus {
-  background: #dc422b;
-}
-.btn-social.btn-google-plus:hover {
-  background: #e36957;
-}
-.btn-social:hover {
-  color: #fff;
-}
 
-#social-media .icon-facebook {
-  background-color: #3c5899;
-}
-#social-media .icon-facebook:hover {
-  background-color: #4e6fba;
-}
-#social-media .icon-twitter {
-  background-color: #29c5f6;
-}
-#social-media .icon-twitter:hover {
-  background-color: #5ad2f8;
-}
-{{ page.richtextpage.content|richtext_filters|safe }}
-
-#social-media .icon-google-plus {
-  background-color: #d13d2f;
-}
-#social-media .icon-google-plus:hover {
-  background-color: #da6459;
-}
-#social-media .icon-pinterest {
-  background-color: #c61118;
-}
-#social-media .icon-pinterest:hover {
-  background-color: #ec1e26;
-}
-.icon-lg {
-  font-size: 48px;
-  height: 108px;
-  width: 108px;
-  line-height: 108px;
-  color: #fff;
-  margin: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-  text-align: center;
-  display: inline-block !important;
-  border-radius: 100%;
-}
-.icon-md {
-  font-size: 36px;
-  height: 68px;
-  width: 68px;
-  line-height: 68px;
-  color: #fff;
-  margin-right: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-  text-align: center;
-  display: block;
-  border-radius: 50%;
-  -webkit-transition: 500ms;
-  -moz-transition: 500ms;
-  -o-transition: 500ms;
-  transition: 500ms;
-}
 .modal {
   border: 0;
 }
@@ -877,17 +856,22 @@ ul.social > li > a:hover {
 .accordion-inner {
   border-top: 0;
 }
+
+
+/*BLOG*/
+
 .blog .blog-item {
+  width: 100%
   background-color: #fff;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  border-radius: 0px;
+  margin-bottom: 30px;
 }
 .blog .blog-item .img-blog {
   width: 100%;
   border-radius: 5px 5px 0 0;
 }
 .blog .blog-item .blog-content {
-  pcol-sm-6adding: 20px;
+  padding: 20px;
 }
 .blog .blog-item h3 {
   margin-top: 0;
@@ -973,7 +957,8 @@ ul.faq li > div h3 {
 
 footer {
       border-top: 1px solid #e7e7e7;
-    }
+    
+}
 
 .overfooter {
   background-color: #005500;
@@ -1030,7 +1015,7 @@ footer {
 .fa-youtube:hover {
   color: #F00;
 }
-.fa-rss:col-sm-6hover {
+.fa-rss:hover {
   color: #FA0;
 }
 .follow-me-icons i {

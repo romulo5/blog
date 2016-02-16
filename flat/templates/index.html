@@ -7,101 +7,74 @@
 {% endblock %}
 
 {% block main %}
-<section class="no-margin" id="main-slider">
-        <div class="carousel slide wet-asphalt">
-            <ol class="carousel-indicators">
-                <li class="" data-slide-to="0" data-target="#main-slider"></li>
-                <li data-slide-to="1" data-target="#main-slider" class=""></li>
-                <li data-slide-to="2" data-target="#main-slider" class="active"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div style="background-image: url(static/images/slider/bg1.jpg)" class="item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content centered" style="margin-top: 265px;">
-                                    <h2 class="animation animated-item-1">Powerful and Responsive Web Design</h2>
-                                    <p class="animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-                <div style="background-image: url(static/images/slider/bg2.jpg)" class="item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content center centered" style="margin-top: 208.5px;">
-                                    <h2 class="boxed animation animated-item-1">Clean, Crisp, Powerful and Responsive Web Design</h2>
-                                    <p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                                    <br>
-                                    <a href="#" class="btn btn-md animation animated-item-3">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-                <div style="background-image: url(static/images/slider/bg3.jpg)" class="item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="carousel-content centered" style="margin-top: 219px;">
-                                    <h2 class="animation animated-item-1">Powerful and Responsive Web Design Theme</h2>
-                                    <p class="animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
-                                    <a href="#" class="btn btn-md animation animated-item-3">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="centered" style="margin-top: 129px;">
-                                    <div class="embed-container">
-                                        <iframe frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="//player.vimeo.com/video/69421653?title=0&amp;byline=0&amp;portrait=0&amp;color=a22c2f"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a data-slide="prev" href="#main-slider" class="prev hidden-xs">
-            <i class="icon-angle-left"></i>
-        </a>
-        <a data-slide="next" href="#main-slider" class="next hidden-xs">
-            <i class="icon-angle-right"></i>
-        </a>
-    </section>
-    <section class="emerald" id="services">
+
+
+<section id="front" class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 front">
+                <i class="fa fa-quote-left fa-3x fa-pull-left fa-border"></i>
+            <p>Neste espaço divulgaremos dados, informações e análises do processo de planejamento e orçamento públicos de uma forma clara e objetiva </p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="sections">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="icon-twitter icon-md"></i>
-                        </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class=" media fa-stack fa-4x">
+                        <a href="/blog/"> 
+                           <i class="fa fa-circle fa-stack-2x"></i>
+                           <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                        </a>
+                    </div>
                         <div class="media-body">
-                            <h3 class="media-heading">Twitter Marketing</h3>
+                            <h3 class="media-heading">Artigos</h3>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                        </div>
+                  
+                </div><!--/.col-md-4-->
+                <div class="col-md-3 col-sm-6">
+                    <div class="media">
+                    <a href="/links/"> 
+                        <div class=" media fa-stack fa-4x">
+                           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                           <i class="fa fa-link fa-stack-1x fa-inverse"></i>
+                        </div>
+                        </a>
+                        <div class="media-body">
+                            <h3 class="media-heading">Arquivos e Links</h3>
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
                         </div>
                     </div>
                 </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="media">
-                        <div class="pull-left">
-                            <i class="icon-facebook icon-md"></i>
-                        </div>
+                        <div class=" media fa-stack fa-4x">
+                            <a href="/podcasts/"> 
+                                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                                <i class="fa fa-microphone fa-stack-1x fa-inverse"></i>
+                            </a>
+                        </div>      
                         <div class="media-body">
-                            <h3 class="media-heading">Facebook Marketing</h3>
+                            <h3 class="media-heading">Podcasts</h3>
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
                         </div>
                     </div>
-                </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6">
+                </div>
+                <div class="col-md-3 col-sm-6">
                     <div class="media">
-                        <div class="pull-left">
-                            <i class="icon-google-plus icon-md"></i>
+                    <a href="/tableau/"> 
+                        <div class=" media fa-stack fa-4x">
+                           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                           <i class="fa fa-pie-chart fa-stack-1x fa-inverse"></i>
                         </div>
+                        </a>
                         <div class="media-body">
-                            <h3 class="media-heading">Google Plus Marketing</h3>
+                            <h3 class="media-heading">Tableau</h3>
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
                         </div>
                     </div>
@@ -109,7 +82,9 @@
             </div>
         </div>
     </section>
-	 <section id="recent-works">
+	 
+
+     <section class="recents">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -215,43 +190,9 @@
                 </div>
             </div><!--/.row-->
         </div>
-    </section><!--/#recent-works-->
-	<section id="testimonial" class="alizarin">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center">
-                        <h2>What our clients say</h2>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                    </div>
-                    <div class="gap"></div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                            </blockquote>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                            </blockquote>
-                        </div>
-                        <div class="col-md-6">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                            </blockquote>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--/#testimonial-->
-
+    </section><!--/#recent-posts-->
+	
+  
 
 {% endblock %}
 

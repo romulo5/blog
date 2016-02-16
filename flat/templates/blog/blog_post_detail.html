@@ -26,91 +26,92 @@
 	<div class="row">
 		<div class="col-sm-8">
 			<div class="blog">
-			<div class="blog-item">
-		 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
-			{% block blog_post_list_post_featured_image %}
-			<a href="{{ blog_post.get_absolute_url }}">
-				<img width="100%" class="img-responsive img-blog" src="{{ MEDIA_URL }}{{blog_post.featured_image }}">
-			</a>
-			{% endblock %}
-			{% endif %}
-		<div class="blog-content">
-			
-	{% block blog_post_list_post_title %}
-		
-	
-	{% endblock %}
-{% block blog_post_list_post_metainfo %}
-{% editable blog_post.publish_date %}
-                   <div class="entry-meta">
-                                <span><i class="icon-user"></i> {% with blog_post.user as author %}
-								<a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
-								{% endwith %}
-								</span>
-                                <span><i class="icon-folder-close"></i>
-                                {% with blog_post.categories.all as categories %}
-								{% if categories %}
-								{% trans "in" %}
-								{% for category in categories %}
-								<a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>{% if not forloop.last %}, {% endif %}
-								{% endfor %}
-								{% endif %}
-								{% endwith %}
-                                
-                                </span>
-                                <span><i class="icon-calendar"></i> {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}</span>
-                                <span><i class="icon-comment"></i> 
-                                {% if blog_post.allow_comments %}
-									
-									{% if settings.COMMENTS_DISQUS_SHORTNAME %}
-									<a href="{{ blog_post.get_absolute_url }}#disqus_thread"
-										data-disqus-identifier="{% disqus_id_for blog_post %}">
-										{% trans "Comments" %}
-									</a>
-									{% else %}
-									<a href="{{ blog_post.get_absolute_url }}#comments">
-										{% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
-									</a>
-									{% endif %}
-									{% endif %}
-																
-                                </span>
-                            </div>
+             <div class="blog-item">
+                 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
+                 {% block blog_post_list_post_featured_image %}
+                 <a href="{{ blog_post.get_absolute_url }}">
+                    <img width="100%" class="img-responsive img-blog" src="{{ MEDIA_URL }}{{blog_post.featured_image }}">
+                </a>
+                {% endblock %}
+                {% endif %}
 
-{% endeditable %}
-{% endblock %}
+                <div class="blog-content">
+
+                    {% block blog_post_list_post_title %}
 
 
+                    {% endblock %}
+                    {% block blog_post_list_post_metainfo %}
+                    {% editable blog_post.publish_date %}
+                    <div class="entry-meta">
+                        <span> Publicado por:  {% with blog_post.user as author %}
+                            <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
+                            {% endwith %} <i class="fa fa-user"></i>
+                        </span>
+                        <span>
+                            {% with blog_post.categories.all as categories %}
+                            {% if categories %}
+                            {% trans "em " %}
+                            {% for category in categories %}
+                            <a href="{% url "blog_post_list_category" category.slug %}"> <i class="fa fa-folder">  {% trans " " %}</i>{{ category }}</a>{% if not forloop.last %}, {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            {% endwith %}
 
-{% block blog_post_list_post_content %}
-{% editable blog_post.content %}
-{{ blog_post.description_from_content|safe }}
-{% endeditable %}
-{% endblock %}
+                        </span>
+                        <span><i class="fa fa-calendar"></i> {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}</span>
+                        <span><i class="icon-comment"></i> 
+                            {% if blog_post.allow_comments %}
 
- <a href="{{ blog_post.get_absolute_url }}"  class="btn btn-default">{% trans "read more" %} <i class="icon-angle-right"> </i></a>
-{% block blog_post_list_post_links %}
-{% keywords_for blog_post as tags %}
-    {% if tags %}
-<div class="tags">
-  <i class="icon-tags"></i> {% trans "Tags" %}:
-    {% spaceless %}
-    {% for tag in tags %} 
+                            {% if settings.COMMENTS_DISQUS_SHORTNAME %}
+                            <a href="{{ blog_post.get_absolute_url }}#disqus_thread"
+                            data-disqus-identifier="{% disqus_id_for blog_post %}">
+                            {% trans "Comments" %}
+                        </a>
+                        {% else %}
+                        <a href="{{ blog_post.get_absolute_url }}#comments">
+                          {% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comentário{% plural %}{{ comments_count }} comentários{% endblocktrans %}
+                      </a>
+                      {% endif %}
+                      {% endif %}
 
-  <a href="{% url "blog_post_list_tag" tag.slug %}" class="btn btn-xs btn-primary">{{ tag }}</a>
-  {% endfor %}
-    {% endspaceless %}
-</div>
-{% endif %}
-{% block blog_post_detail_comments %}
-{% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
-{% endblock %}
+                  </span>
+              </div>
 
-{% endblock %}
+              {% endeditable %}
+              {% endblock %}
 
-</div>
-</div>
-</div>
+
+
+              {% block blog_post_list_post_content %}
+              {% editable blog_post.content %}
+              {{ blog_post.description_from_content|safe }}
+              {% endeditable %}
+              {% endblock %}
+
+              <a href="{{ blog_post.get_absolute_url }}"  class="btn btn-default">{% trans "Leia mais" %} <i class="fa fa-angle-right"> </i></a>
+              {% block blog_post_list_post_links %}
+              {% keywords_for blog_post as tags %}
+              {% if tags %}
+              <div class="tags">
+                  <i class="fa fa-tags"></i> {% trans "Tags" %}:
+                  {% spaceless %}
+                  {% for tag in tags %} 
+
+                  <a href="{% url "blog_post_list_tag" tag.slug %}" class="btn btn-xs btn-primary">{{ tag }}</a>
+                  {% endfor %}
+                  {% endspaceless %}
+              </div>
+              {% endif %}
+              {% block blog_post_detail_comments %}
+              {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
+              {% endblock %}
+
+              {% endblock %}
+
+          </div>
+      </div>
+  </div>
 </div>
 </div>
 </section>
@@ -118,7 +119,7 @@
 {% block blog_post_detail_rating %}
 <div class="panel panel-default rating">
     <div class="panel-body">
-    {% rating_for blog_post %}
+        {% rating_for blog_post %}
     </div>
 </div>
 {% endblock %}
@@ -131,32 +132,32 @@
 
 {% block blog_post_previous_next %}
 <ul class="pager">
-{% with blog_post.get_previous_by_publish_date as previous %}
-{% if previous %}
-<li class="previous">
-    <a href="{{ previous.get_absolute_url }}">&larr; {{ previous }}</a>
-</li>
-{% endif %}
-{% endwith %}
-{% with blog_post.get_next_by_publish_date as next %}
-{% if next %}
-<li class="next">
-    <a href="{{ next.get_absolute_url }}">{{ next }} &rarr;</a>
-</li>
-{% endif %}
-{% endwith %}
+    {% with blog_post.get_previous_by_publish_date as previous %}
+    {% if previous %}
+    <li class="previous">
+        <a href="{{ previous.get_absolute_url }}">&larr; {{ previous }}</a>
+    </li>
+    {% endif %}
+    {% endwith %}
+    {% with blog_post.get_next_by_publish_date as next %}
+    {% if next %}
+    <li class="next">
+        <a href="{{ next.get_absolute_url }}">{{ next }} &rarr;</a>
+    </li>
+    {% endif %}
+    {% endwith %}
 </ul>
 {% endblock %}
 
 {% block blog_post_detail_related_posts %}
 {% if blog_post.related_posts.all %}
 <div id="related-posts">
-<h3>{% trans 'Related posts' %}</h3>
-<ul class="list-unstyled">
-{% for post in blog_post.related_posts.all %}
-     <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
+    <h3>{% trans 'Posts relacionados' %}</h3>
+    <ul class="list-unstyled">
+        {% for post in blog_post.related_posts.all %}
+        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
 {% endif %}
 
