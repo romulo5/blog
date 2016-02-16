@@ -1,4 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto|Open+Sans+Condensed:300:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+
 .clearfix {
   *zoom: 1;
 }
@@ -344,11 +346,22 @@ margin-top:80px;
 
 .navbar-brand {
   
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
-  padding-left: 30px;
-
+  padding-left: 50px;
+  font-family: 'Open Sans Condensed';  
+  /*text-shadow: 4px 4px 4px #aaa;*/
 }
+
+.navbar-brand-sm {
+  
+  font-size: 20px;
+  /*font-weight: 500;*/
+  padding-left: 25px;
+  font-family: 'Open Sans Condensed';    
+  /*text-shadow: 4px 4px 4px #aaa;*/
+}
+
 
 .navbar-menu{
   padding-top: 15px;
@@ -373,6 +386,11 @@ margin-top:80px;
 padding: 10px 0 15px 15px;
 
 }
+
+
+
+
+
 .portfolio-items,
 .portfolio-filter {
   list-style: none;
