@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto|Open+Sans+Condensed:300:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto|Open+Sans|Open+Sans+Condensed:300:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Tangerine);
 
 .clearfix {
@@ -32,7 +32,7 @@
 body {
   color: #34495e;
   background: #f5f5f5;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 h1,
@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 400;
 }
 a {
